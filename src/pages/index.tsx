@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import { FiArrowRight } from "react-icons/fi";
 
 const Home: NextPage = () => {
   return (
@@ -17,8 +18,8 @@ const Home: NextPage = () => {
         seconds.
       </p>
       <Link href="/create">
-        <button className="px-8 py-4 rounded-xl text-[30px] font-bold bg-gradient-to-r from-darkBlue to-lightBlue hover:bg-gradient-to-l hover:from-darkBlue hover:to-lightBlue ">
-          Create a poll &#8594;
+        <button className="flex items-center gap-2 px-8 py-4 rounded-xl text-[30px] font-bold bg-gradient-to-r from-darkBlue to-lightBlue hover:bg-gradient-to-l hover:from-darkBlue hover:to-lightBlue ">
+          Create a poll <FiArrowRight />
         </button>
       </Link>
     </div>

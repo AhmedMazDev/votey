@@ -1,11 +1,16 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Navbar from "@/components/layout/Navbar";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
     <>
-      <Navbar />
+      {router.pathname !== "/login" && router.pathname !== "/signup" && (
+        <Navbar />
+      )}
       <Component {...pageProps} />
     </>
   );

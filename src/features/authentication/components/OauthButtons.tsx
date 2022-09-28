@@ -13,13 +13,13 @@ const OauthButtons = () => {
       >
         <BsGoogle size="20" />
       </OauthButton>
-      <OauthButton
+      {/* <OauthButton
         onClick={() => {
-          signIn("google", { callbackUrl: "/" });
+          signIn("facebook", { callbackUrl: "/" });
         }}
       >
         <BsFacebook size="20" />
-      </OauthButton>
+      </OauthButton> */}
       <OauthButton
         onClick={() => {
           signIn("discord", { callbackUrl: "/" });

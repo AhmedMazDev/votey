@@ -19,5 +19,8 @@ module.exports = {
         sans: ["Inter", "ui-sans-serif", "system-ui"],
       },
     },
+    container: {
+      center: true,
+    },
   },
 };

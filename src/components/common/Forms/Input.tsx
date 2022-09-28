@@ -1,21 +1,21 @@
-import { InputHTMLAttributes } from "react";
+import { DetailedHTMLProps, forwardRef, InputHTMLAttributes } from "react";
+import { useFormContext } from "react-hook-form";
 
 export type InputProps = {
   id: string;
   name: string;
-  type: InputHTMLAttributes<HTMLInputElement>["type"];
   classnames?: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-};
+} & DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
-const Input = ({ id, name, type, value, onChange, classnames }: InputProps) => {
+const Input = ({ classnames, id, name, ...rest }: InputProps) => {
+  const { register } = useFormContext();
   return (
     <input
-      {...{ id, name, type, value, onChange }}
+      id={id}
       className={`w-full px-4 py-2 bg-input rounded-lg outline-none ${classnames}`}
+      {...register(name)}
+      {...rest}
     />
   );
 };
-
 export default Input;

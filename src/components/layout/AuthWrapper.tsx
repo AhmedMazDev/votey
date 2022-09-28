@@ -29,7 +29,7 @@ const AuthWrapper = ({
       </Link>
       <div className=" w-screen h-full md:container  flex flex-col md:items-center justify-center  mx-auto gap-8 ">
         <h1 className="text-[36px] font-bold text-center">{title}</h1>
-        <div className="flex felx-col bg-lightBg px-10 py-4 border-t-8 border-t-darkBlue rounded-md">
+        <div className=" md:w-[600px] flex felx-col bg-lightBg px-10 py-4 border-t-8 border-t-darkBlue rounded-md">
           {children}
         </div>
         <div className="text-[20px] text-center font-medium ">

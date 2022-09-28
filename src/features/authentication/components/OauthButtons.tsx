@@ -1,19 +1,30 @@
 import OauthButton from "@/components/common/UI/OauthButton";
+import { signIn } from "next-auth/react";
 import { BsGoogle, BsFacebook } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 
-type Props = {};
-
-const OauthButtons = ({}: Props) => {
+const OauthButtons = () => {
   return (
-    <div className="flex items-center justify-between gap-4">
-      <OauthButton>
+    <div className="w-full flex items-center justify-between gap-6">
+      <OauthButton
+        onClick={() => {
+          signIn("google", { callbackUrl: "/" });
+        }}
+      >
         <BsGoogle size="20" />
       </OauthButton>
-      <OauthButton>
+      <OauthButton
+        onClick={() => {
+          signIn("google", { callbackUrl: "/" });
+        }}
+      >
         <BsFacebook size="20" />
       </OauthButton>
-      <OauthButton>
+      <OauthButton
+        onClick={() => {
+          signIn("discord", { callbackUrl: "/" });
+        }}
+      >
         <FaDiscord size="20" />
       </OauthButton>
     </div>
